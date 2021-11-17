@@ -6,9 +6,36 @@ function fizBuz(num) {
       console.log("Fizz");
     } else if (i % 5 === 0) {
       console.log("Buzz");
-    }else{
+    } else {
       console.log(i);
     }
   }
 }
-fizBuz(20);
+// fizBuz(20);
+
+function compareSTring(str) {
+  let strArr = str.split("");
+  let objArr = {};
+  console.log(strArr);
+  // for (let i = 0; i < str.length; i++) {
+  //   if (objArr[strArr[i]]) {
+  //     objArr[strArr[i]]++;
+  //   } else {
+  //     objArr[strArr[i]] = 1;
+  //   }
+  // }
+  console.log(objArr);
+
+  strArr.forEach((letter) => {
+    if (!objArr[letter]) {
+      objArr[letter] = 1;
+    } else {
+      objArr[letter]++;
+    }
+  });
+
+  return objArr;
+}
+
+const strng = compareSTring("xoxoxoooooojfdlksaslkadjfdafdsidf");
+console.log(strng);
