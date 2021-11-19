@@ -17,22 +17,18 @@ function compareSTring(str) {
   let strArr = str.split("");
   let objArr = {};
   console.log(strArr);
-  // for (let i = 0; i < str.length; i++) {
-  //   if (objArr[strArr[i]]) {
-  //     objArr[strArr[i]]++;
-  //   } else {
-  //     objArr[strArr[i]] = 1;
-  //   }
-  // }
+  for (let i = 0; i < str.length; i++) {
+    if (!objArr[strArr[i]]) objArr[strArr[i]] = 1;
+      objArr[strArr[i]]++;
+
+  }
   console.log(objArr);
 
-  strArr.forEach((letter) => {
-    if (!objArr[letter]) {
-      objArr[letter] = 1;
-    } else {
-      objArr[letter]++;
-    }
-  });
+  // strArr.forEach((letter) => {
+  //   if (!objArr[letter]) objArr[letter] = 1;
+  //   objArr[letter]++;
+  //
+  // });
 
   return objArr;
 }
