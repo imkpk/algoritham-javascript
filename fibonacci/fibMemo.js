@@ -10,7 +10,7 @@ function fibMemo(position, cache) {
    *
    * */
   cache = cache || [];
-  console.log(cache[position]);
+  // console.log(cache[position]);
 //  base-case
   if (cache[position]) {
     return cache[position];
@@ -25,5 +25,5 @@ function fibMemo(position, cache) {
   return cache[position];
 }
 
-const fibonacciMemo = fibMemo(7);
+const fibonacciMemo = fibMemo(1000);
 console.log(fibonacciMemo);
